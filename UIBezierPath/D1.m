@@ -18,25 +18,31 @@
     }
     return self;
 }
+
+-(void)dealloc
+{
+    self.myPath = nil;
+}
 - (void)drawRect:(CGRect)rect
 {
     // Create an oval shape to draw.
     UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:
                            CGRectMake(0, 0, 200, 100)];
     
+    self.myPath = aPath;
     // Set the render colors.
         [[UIColor redColor] setFill];
     [[UIColor blackColor] setStroke];
 
-    
+//    
     CGContextRef aRef = UIGraphicsGetCurrentContext();
-    
-    // If you have content to draw after the shape,
-    // save the current state before changing the transform.
-    //CGContextSaveGState(aRef);
-    
-    // Adjust the view's origin temporarily. The oval is
-    // now drawn relative to the new origin point.
+//    
+//    // If you have content to draw after the shape,
+//    // save the current state before changing the transform.
+//    //CGContextSaveGState(aRef);
+//    
+//    // Adjust the view's origin temporarily. The oval is
+//    // now drawn relative to the new origin point.
      CGContextTranslateCTM(aRef, self.frame.size.width/2 - aPath.bounds.size.width/2, self.frame.size.height/2 - aPath.bounds.size.height/2);
     
     // Adjust the drawing options as needed.
@@ -47,11 +53,13 @@
      [aPath fill];
     [aPath stroke];
    
-
+    
     
     // Restore the graphics state before drawing any other content.
     //CGContextRestoreGState(aRef);
 }
+
+
 - (BOOL)containsPoint:(CGPoint)point onPath:(UIBezierPath *)path inFillArea:(BOOL)inFill
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -90,5 +98,42 @@
     // Drawing code
 }
 */
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch * touch = [touches anyObject];
+    CGPoint  point = [touch locationInView:self];
+    
+    
+                      
+    if ([self containsPoint:point onPath:self.myPath inFillArea:NO])
+    {
+        NSLog(@" point(%f,%f) is in FillArea", point.x , point.y);
+    }
+    else
+    {
+        NSLog(@" point(%f,%f) is  not in FillArea", point.x , point.y);
+
+    }
+    
+
+    
+    
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
 
 @end

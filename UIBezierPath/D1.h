@@ -10,4 +10,7 @@
 
 @interface D1 : UIView
 
+@property(nonatomic,strong)UIBezierPath *myPath ;
+@property(nonatomic,strong)UIView *myView ;
+
 @end

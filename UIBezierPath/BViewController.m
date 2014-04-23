@@ -7,8 +7,10 @@
 //
 
 #import "BViewController.h"
+#import "D1.h"
 
 @interface BViewController ()
+@property (weak, nonatomic) IBOutlet D1 *myView;
 
 @end
 
