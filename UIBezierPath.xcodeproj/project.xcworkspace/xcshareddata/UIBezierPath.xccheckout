@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C688EE9B-B103-4ABE-AC67-49494DB5F80C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UIBezierPath</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0123F04A463296EB6CD6DCBE07798D547F15E7AF</key>
+		<string>https://github.com/WeipengChan/UIBezierPath.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UIBezierPath.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0123F04A463296EB6CD6DCBE07798D547F15E7AF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WeipengChan/UIBezierPath.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0123F04A463296EB6CD6DCBE07798D547F15E7AF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0123F04A463296EB6CD6DCBE07798D547F15E7AF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIBezierPath</string>
+		</dict>
+	</array>
+</dict>
+</plist>
